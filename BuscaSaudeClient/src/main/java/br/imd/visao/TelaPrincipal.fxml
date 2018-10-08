@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.imd.controle.Control">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="0.0" prefWidth="640.0" VBox.vgrow="ALWAYS" />
+      <TabPane prefHeight="400.0" prefWidth="585.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabAtualizar" text="Cadastrar / Atualizar / Excluir">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="469.0">
+                     <children>
+                        <Text layoutX="24.0" layoutY="29.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Unidades" textAlignment="CENTER" wrappingWidth="199.705078125">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </Text>
+                        <Text layoutX="316.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informações da Unidade:" wrappingWidth="158.13671875">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="274.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" wrappingWidth="42.13671875" />
+                        <Text layoutX="274.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço:" wrappingWidth="58.13671875" />
+                        <Text layoutX="274.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro:" wrappingWidth="58.13671875" />
+                        <Text layoutX="274.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Especialidade:" wrappingWidth="84.13671875" />
+                        <TextField fx:id="nome_field_c" layoutX="357.0" layoutY="63.0" />
+                        <TextField fx:id="address_field_c" layoutX="357.0" layoutY="94.0" />
+                        <TextField fx:id="city_fileld_c" layoutX="357.0" layoutY="124.0" />
+                        <TextField fx:id="skills_field_c" layoutX="358.0" layoutY="159.0" />
+                        <Button fx:id="atualizarUnidade" layoutX="358.0" layoutY="216.0" mnemonicParsing="false" onAction="#atualizarUnidade" text="Atualizar" />
+                        <ListView fx:id="listCadastro" layoutX="24.0" layoutY="39.0" prefHeight="260.0" prefWidth="194.0" />
+                        <Button fx:id="listarCadastro" layoutX="102.0" layoutY="309.0" mnemonicParsing="false" onAction="#listar" text="Listar" />
+                        <Button fx:id="excluirUnidade" layoutX="444.0" layoutY="216.0" mnemonicParsing="false" onAction="#excluirUnidade" prefHeight="25.0" prefWidth="62.0" text="Excluir" />
+                        <Button fx:id="cadastrarUnidade" layoutX="270.0" layoutY="216.0" mnemonicParsing="false" onAction="#cadastrarUnidade" text="Cadastrar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabBuscar" text="Buscar">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="78.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Critérios de busca" wrappingWidth="122.552734375">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="274.0" layoutY="53.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultado da Busca" textAlignment="CENTER" wrappingWidth="199.705078125">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="CROSSHAIR" />
+                           </cursor>
+                        </Text>
+                        <Button fx:id="buscarUnidade" layoutX="114.0" layoutY="222.0" mnemonicParsing="false" onAction="#buscarUnidade" text="Buscar" />
+                        <ListView fx:id="listBuscar" layoutX="257.0" layoutY="75.0" prefHeight="259.0" prefWidth="245.0" />
+                        <TextField fx:id="busca_field" layoutX="39.0" layoutY="186.0" prefHeight="25.0" prefWidth="201.0" />
+                        <RadioButton fx:id="radio_nome" layoutX="44.0" layoutY="84.0" mnemonicParsing="false" selected="true" text="Nome" />
+                        <RadioButton fx:id="radio_endereco" layoutX="157.0" layoutY="84.0" mnemonicParsing="false" text="Endereço" />
+                        <RadioButton fx:id="radio_bairro" layoutX="45.0" layoutY="133.0" mnemonicParsing="false" text="Bairro" />
+                        <RadioButton fx:id="radio_especialidade" layoutX="157.0" layoutY="133.0" mnemonicParsing="false" text="Especialidade" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

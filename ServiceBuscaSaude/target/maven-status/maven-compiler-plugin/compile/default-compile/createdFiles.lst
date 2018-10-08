@@ -1,0 +1,5 @@
+model\UnidadeSaude.class
+service\BuscaSaudeCRUD.class
+dao\UnidadeSaudeDAO.class
+application\BuscaSaudeService.class
+service\IBuscaSaudeCRUD.class
